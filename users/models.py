@@ -7,6 +7,10 @@ class Model(models.Model):
     nama_cabang = models.CharField(max_length=100, unique=True)
     deskripsi = models.TextField()
     sejarah = models.TextField()
+    gambar = models.ImageField(
+        null=True,
+        blank=True
+    )
 
     def __str__(self):
         return str(self.id) + " | "+self.nama_cabang

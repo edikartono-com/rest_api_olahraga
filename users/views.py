@@ -31,6 +31,7 @@ def Add(request):
             'nama cabang':serializer.data['nama_cabang'],
             'deskripsi':serializer.data['deskripsi'],
             'sejarah':serializer.data['sejarah'],
+            'gambar':serializer.data['gambar']
         })
     return Response(serializer.errors)
 @api_view(['GET'])
